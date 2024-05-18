@@ -1,4 +1,4 @@
-CREATE DATABASE files;
+CREATE DATABASE IF NOT EXISTS files;
 
 USE files;
 
@@ -13,6 +13,12 @@ CREATE TABLE usuario (
   tipo int NOT NULL,
   PRIMARY KEY (idusuario)
 );
+
+INSERT INTO usuario(nombre, apellido_paterno, apellido_materno, user, email, pass, tipo)
+VALUES ('Ezequiel Amado', 'Cruz', 'Juarez', 'ezequix', 'ezequiel318@gmail.com', 'contraseña', 1);
+
+INSERT INTO usuario(nombre, apellido_paterno, apellido_materno, user, email, pass, tipo)
+VALUES ('Aaron', 'Velazco', 'Agustin', 'aaron', 'aaron@gmail.com', 'contraseña', 1);
 
 INSERT INTO usuario(nombre, apellido_paterno, apellido_materno, user, email, pass, tipo)
 VALUES ('Juan Diego', 'Ortiz', 'Cruz', 'JUANIMAN', 'juanortiz318@gmail.com', 'juan123', 1);
